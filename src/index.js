@@ -1,8 +1,8 @@
 const iconsPlugin = (md, options) => {
   const arrayReplaceAt = md.utils.arrayReplaceAt
 
-  md.renderer.rules.emoji = (tokens, idx) => {
-    return tokens[idx].content
+  md.renderer.rules.icons = (tokens, idx) => {
+    return `<i>${tokens[idx].content}</i>`
   }
 
   md.core.ruler.push('icons', (state) => {
@@ -18,7 +18,12 @@ const iconsPlugin = (md, options) => {
           level -= token.nesting
         }
         if (level === 0 && token.type === 'text' && options.regex.test(token.content)) {
-          state.tokens[i].children = tokens = arrayReplaceAt(tokens, j, [tokens[j]])
+          const newTokens = token.content.split(options.regex).filter((item) => item.length > 0).map((item) => {
+            const newToken = new state.Token('icons', '', 0)
+            newToken.content = item
+            return newToken
+          })
+          state.tokens[i].children = tokens = arrayReplaceAt(tokens, j, newTokens)
         }
       }
     }
