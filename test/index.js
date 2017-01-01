@@ -13,8 +13,10 @@ mdi = mdi.use(markdownItIcons, {
     }
 })
 
-console.log(mdi.render(':heart:'))
-console.log('Everything seems fine!')
-console.log(mdi.render(`http://baidu.com`))
+assert('<h1>Hello world</h1>' === mdi.render('# Hello world').trim())
+assert('<p>Hello world</p>' === mdi.render('Hello world').trim())
+assert('<p><a href="http://baidu.com">http://baidu.com</a></p>' === mdi.render('http://baidu.com').trim())
+assert('<p><a href="http://baidu.com">baidu.com</a></p>' === mdi.render('baidu.com').trim())
 
-// assert('<i class="e1a-heart"></i>' === mdi.render(':heart:'))
+console.log(mdi.render(':heart:'))
+// assert('<p><i class="e1a-heart"></i></p>' === mdi.render(':heart:').trim())
