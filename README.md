@@ -35,4 +35,4 @@ mdi = mdi.use(markdownItIcons, {
 
 ## Todo
 
-1. It could be a generic solution: `markdown-it-regex`. Replace some content according to regex
+1. It could be a generic solution: `markdown-it-regex`. Replace arbitrary content according to regex
