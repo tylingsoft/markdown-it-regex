@@ -4,6 +4,7 @@ import markdownItIcons from '../src/index'
 
 let mdi = markdownIt()
 mdi = mdi.use(markdownItIcons, {
+  name: 'emoji',
   regex: /(:heart:)/,
   replace: (match) => {
     return `<i class="e1a-${match.slice(1, -1)}"></i>`
