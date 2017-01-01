@@ -16,15 +16,13 @@ yarn add markdown-it-icons
 import markdownIt from 'markdown-it'
 import markdownItIcons from 'markdown-it-icons'
 let mdi = markdownIt()
-mdi = mdi.use(markdownItIcons, {
-    name: 'font-awesome',
+mdi = mdi.use(markdownItIcons, { // font-awesome
     regex: /\b:fa-[0-9a-z_]+?:\b/,
     replace: (code) => {
         return `<i class="fa ${code}"></i>`
     }
 })
-mdi = mdi.use(markdownItIcons, {
-    name: 'emoji',
+mdi = mdi.use(markdownItIcons, { // emoji
     regex: /\b:[0-9a-z_]+?:\b/,
     replace: (code) => {
         return `<i class="e1a-${code}"></i>`
