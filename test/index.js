@@ -10,4 +10,6 @@ mdi = mdi.use(markdownItIcons, {
     }
 })
 
-console.log(mdi.render(':heart:'))
+assert('<i class="e1a-heart"></i>' === mdi.render(':heart:'))
+
+console.log('Everything seems fine!')
