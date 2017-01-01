@@ -14,8 +14,9 @@ const iconsPlugin = (md, options) => {
       for(let j = tokens.length - 1; j >= 0; j--) {
         let token = tokens[j]
         if(token.type === 'link_open' || token.type === 'link_close') {
+          console.log(`token.type: ${token.type} | token.info: ${token.info} | token.nesting: ${token.nesting}`)
           if(token.info === 'auto') {
-            return
+            console.log(`token.nesting: ${token.nesting}`)
           }
         }
         if(token.type === 'text' && options.regex.test(token.content)) {

@@ -33,6 +33,21 @@ mdi = mdi.use(markdownItIcons, {
 ```
 
 
+## Development
+
+### Build
+
+```
+yarn run build
+```
+
+### Test
+
+```
+yarn test
+```
+
+
 ## Todo
 
 1. It could be a generic solution: `markdown-it-regex`. Replace arbitrary content according to regex
