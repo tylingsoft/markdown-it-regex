@@ -20,4 +20,4 @@ assert(mdi.render('baidu.com').trim() === '<p><a href="http://baidu.com">baidu.c
 assert(mdi.render(':heart:').trim() === '<p><i class="e1a-heart"></i></p>')
 assert(mdi.render('I :heart: you').trim() === '<p>I <i class="e1a-heart"></i> you</p>')
 
-console.log(mdi.render('I :heart: you'))
+console.log(mdi.render('I :heart: :heart: :heart: you'))
