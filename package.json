@@ -5,5 +5,8 @@
   "main": "src/index.bundle.js",
   "repository": "git@github.com:tylingsoft/markdown-it-icons.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "emojione": "^2.2.7"
+  }
 }
