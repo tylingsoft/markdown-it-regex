@@ -17,6 +17,7 @@
     "emojione": "^2.2.7",
     "json-loader": "^0.5.4",
     "markdown-it": "^8.2.2",
+    "standard": "^8.6.0",
     "webpack": "^1.14.0"
   }
 }

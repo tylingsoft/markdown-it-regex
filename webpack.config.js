@@ -13,7 +13,7 @@ const loaders = [
       presets: [
         ['env', {
           'targets': {
-            'node': "current"
+            'node': 'current'
           }
         }]
       ]
