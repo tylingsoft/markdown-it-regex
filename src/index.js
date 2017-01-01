@@ -19,7 +19,7 @@ const iconsPlugin = (md, options) => {
           }
         }
         if(token.type === 'text' && options.regex.test(token.content)) {
-          state.tokens[i].children = tokens = arrayReplaceAt(tokens, j, )
+          // state.tokens[i].children = tokens = arrayReplaceAt(tokens, j, )
         }
       }
     }

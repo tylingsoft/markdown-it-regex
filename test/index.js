@@ -1,3 +1,4 @@
+import assert from 'assert'
 import markdownIt from 'markdown-it'
 import markdownItIcons from '../src/index'
 
@@ -10,6 +11,7 @@ mdi = mdi.use(markdownItIcons, {
     }
 })
 
+console.log(mdi.render(':heart:'))
 assert('<i class="e1a-heart"></i>' === mdi.render(':heart:'))
 
 console.log('Everything seems fine!')
