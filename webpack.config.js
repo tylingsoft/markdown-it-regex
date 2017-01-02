@@ -24,17 +24,6 @@ const loaders = [
 const configurations = [
   {
     entry: {
-      'index': './src/index.js'
-    },
-    output: {
-      path: path.join(__dirname, 'src'),
-      filename: '[name].bundle.js'
-    },
-    module: { loaders },
-    target: 'node'
-  },
-  {
-    entry: {
       'index': './test/index.js'
     },
     output: {
