@@ -24,11 +24,24 @@ const loaders = [
 const configurations = [
   {
     entry: {
+      'index': './src/index.js'
+    },
+    output: {
+      path: path.join(__dirname, 'src'),
+      filename: '[name].bundle.js',
+      libraryTarget: 'commonjs2'
+    },
+    module: { loaders },
+    target: 'node'
+  },
+  {
+    entry: {
       'index': './test/index.js'
     },
     output: {
       path: path.join(__dirname, 'test'),
-      filename: '[name].bundle.js'
+      filename: '[name].bundle.js',
+      libraryTarget: 'commonjs2'
     },
     module: { loaders },
     target: 'node'
