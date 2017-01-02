@@ -14,7 +14,8 @@ const regexPlugin = (md, options) => {
         if (token.type === 'text' && options.regex.test(token.content)) {
           const newTokens = token.content.split(options.regex)
             .map((item, index) => ({ type: (index % 2 === 0 ? 'text' : options.name), content: item }))
-            .filter((item) => item.content.length > 0).map((item) => {
+            .filter((item) => item.content.length > 0)
+            .map((item) => {
               const newToken = new state.Token(item.type, '', 0)
               newToken.content = item.content
               return newToken
