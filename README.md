@@ -15,8 +15,8 @@ yarn add markdown-it-regex
 ```javascript
 import markdownIt from 'markdown-it'
 import markdownItRegex from 'markdown-it-regex'
-let mdi = markdownIt()
-mdi = mdi.use(markdownItRegex, {
+const mdi = markdownIt()
+mdi.use(markdownItRegex, {
   name: 'emoji',
   regex: /(:(?:heart|panda_face|car):)/,
   replace: (match) => {

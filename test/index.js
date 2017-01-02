@@ -2,15 +2,15 @@ import assert from 'assert'
 import markdownIt from 'markdown-it'
 import markdownItRegex from '../src/index'
 
-let mdi = markdownIt()
-mdi = mdi.use(markdownItRegex, {
+const mdi = markdownIt()
+mdi.use(markdownItRegex, {
   name: 'emoji',
   regex: /(:(?:heart|panda_face|car):)/,
   replace: (match) => {
     return `<i class="e1a-${match.slice(1, -1)}"></i>`
   }
 })
-mdi = mdi.use(markdownItRegex, {
+mdi.use(markdownItRegex, {
   name: 'font-awesome',
   regex: /(:fa-(?:truck|rocket|leaf):)/,
   replace: (match) => {
