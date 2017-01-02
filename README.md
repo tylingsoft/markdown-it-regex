@@ -40,8 +40,3 @@ yarn run build
 ```
 yarn test
 ```
-
-
-## Todo
-
-1. Create another project named `markdown-it-icons` which takes advantages of this project.
