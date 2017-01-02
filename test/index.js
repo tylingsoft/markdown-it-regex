@@ -1,6 +1,6 @@
 import assert from 'assert'
 import markdownIt from 'markdown-it'
-import markdownItRegex from '../src/index'
+import markdownItRegex, { rendererRule, coreRuler } from '../src/index'
 
 const mdi = markdownIt()
 mdi.use(markdownItRegex, {
@@ -29,3 +29,5 @@ assert(mdi.render('A :fa-truck: runs').trim() === '<p>A <i class="fa fa-truck"><
 
 console.log(mdi.render('I :heart: :heart: :heart: you'))
 console.log(mdi.render('A :fa-truck: runs'))
+
+assert(rendererRule && coreRuler)

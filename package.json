@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-regex",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Plugin for markdown-it, replaces strings that match a regular expression pattern.",
   "main": "src/index.bundle.js",
   "scripts": {
