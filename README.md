@@ -1,12 +1,12 @@
-# markdown-it-icons
+# markdown-it-regex
 
-Plugin for markdown-it, adding all kinds of icons, such as emojis and font-awesome icons.
+Plugin for markdown-it, replaces strings that match a regular expression pattern.
 
 
 ## Installation
 
 ```
-yarn add markdown-it-icons
+yarn add markdown-it-regex
 ```
 
 
@@ -14,7 +14,7 @@ yarn add markdown-it-icons
 
 ```javascript
 import markdownIt from 'markdown-it'
-import markdownItIcons from 'markdown-it-icons'
+import markdownItIcons from 'markdown-it-regex'
 let mdi = markdownIt()
 mdi = mdi.use(markdownItIcons, {
   name: 'emoji',
@@ -44,5 +44,4 @@ yarn test
 
 ## Todo
 
-1. Rename this project to `markdown-it-regex`.
 1. Create another project named `markdown-it-icons` which takes advantages of this project.

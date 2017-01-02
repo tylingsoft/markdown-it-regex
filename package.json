@@ -1,13 +1,13 @@
 {
-  "name": "markdown-it-icons",
+  "name": "markdown-it-regex",
   "version": "0.1.0",
-  "description": "Plugin for markdown-it, adding all kinds of icons, such as emojis and font-awesome icons.",
+  "description": "Plugin for markdown-it, replaces strings that match a regular expression pattern.",
   "main": "src/index.bundle.js",
   "scripts": {
     "build": "webpack --progress --colors --watch",
     "test": "node test/index.bundle.js"
   },
-  "repository": "git@github.com:tylingsoft/markdown-it-icons.git",
+  "repository": "git@github.com:tylingsoft/markdown-it-regex.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
   "devDependencies": {

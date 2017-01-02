@@ -1,4 +1,4 @@
-const iconsPlugin = (md, options) => {
+const regexPlugin = (md, options) => {
   md.renderer.rules[options.name] = (tokens, idx) => {
     return options.replace(tokens[idx].content)
   }
@@ -26,4 +26,4 @@ const iconsPlugin = (md, options) => {
   })
 }
 
-export default iconsPlugin
+export default regexPlugin
