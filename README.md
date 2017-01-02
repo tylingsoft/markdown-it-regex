@@ -16,18 +16,14 @@ yarn add markdown-it-icons
 import markdownIt from 'markdown-it'
 import markdownItIcons from 'markdown-it-icons'
 let mdi = markdownIt()
-mdi = mdi.use(markdownItIcons, { // font-awesome
-    regex: /\b:fa-[0-9a-z_]+?:\b/,
-    replace: (code) => {
-        return `<i class="fa ${code}"></i>`
-    }
+mdi = mdi.use(markdownItIcons, {
+  name: 'emoji',
+  regex: /(:heart:|:panda_face:|:car:)/,
+  replace: (match) => {
+    return `<i class="e1a-${match.slice(1, -1)}"></i>`
+  }
 })
-mdi = mdi.use(markdownItIcons, { // emoji
-    regex: /\b:[0-9a-z_]+?:\b/,
-    replace: (code) => {
-        return `<i class="e1a-${code}"></i>`
-    }
-})
+mdi.render('I :heart: you') // <p>I <i class="e1a-heart"></i> you</p>
 ```
 
 
@@ -48,4 +44,5 @@ yarn test
 
 ## Todo
 
-1. It could be a generic solution: `markdown-it-regex`. Replace arbitrary content according to regex
+1. Rename this project to `markdown-it-regex`.
+1. Create another project named `markdown-it-icons` which takes advantages of this project.
