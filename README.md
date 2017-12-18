@@ -32,11 +32,17 @@ mdi.render('I :heart: you') // <p>I <i class="e1a-heart"></i> you</p>
 ### Build
 
 ```
-yarn run build
+yarn build:watch
 ```
 
 ### Test
 
 ```
 yarn test
+```
+
+### Distribution
+
+```
+yarn release && npm publish
 ```

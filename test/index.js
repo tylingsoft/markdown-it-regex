@@ -1,6 +1,6 @@
 import assert from 'assert'
 import markdownIt from 'markdown-it'
-import markdownItRegex, { rendererRule, coreRuler } from '../src/index'
+import markdownItRegex, { rendererRule, coreRuler } from '../dist/index'
 
 const mdi = markdownIt()
 mdi.use(markdownItRegex, {
