@@ -49,4 +49,5 @@ console.log(mdi.render("I :heart: :heart: :heart: you"));
 console.log(mdi.render("A :fa-truck: runs"));
 console.log(mdi.render("Hey       There"));
 
-assert(rendererRule && coreRuler);
+assert(rendererRule !== undefined);
+assert(coreRuler !== undefined);
