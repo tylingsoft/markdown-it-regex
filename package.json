@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-regex",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Plugin for markdown-it, replaces strings that match a regular expression pattern.",
   "repository": "git@github.com:tylingsoft/markdown-it-regex.git",
   "author": "Tyler Liu <tyler4long@gmail.com>",
@@ -28,5 +28,8 @@
     "prepublishOnly": "tsup src/index.ts --format cjs,esm --dts --clean",
     "postpublish": "rm -rf dist",
     "test": "tsx test/index.ts"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
